@@ -1,11 +1,6 @@
-import App from './App';
+import App from './app/App';
 import React, {
 	AppRegistry,
-	Component,
-	Image,
-	Stylesheet,
-	Text,
-	View,
 } from 'react-native'
 
 AppRegistry.registerComponent('LabControl', () => App);

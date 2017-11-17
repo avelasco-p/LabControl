@@ -13,11 +13,16 @@ import {
 	Button,
 } from 'react-native-material-ui';
 
-import {
-	StackNavigator,
-} from 'react-navigation';
+import { NavigationActions } from 'react-navigation';
 
 let SharedPreferences = require('react-native-shared-preferences');
+
+const resetAction = NavigationActions.reset({
+	index: 0,
+	actions: [
+		NavigationActions.navigate({ routeName: 'LabList' }),
+	],
+});
 
 export default class Login extends Component{
 	constructor(props){
@@ -65,7 +70,7 @@ export default class Login extends Component{
 								}}} 
 						onPress={this._signupButton.bind(this)}
 						raised 
-						primary text="SIGN UP"
+						primary text="SIGN IN"
 					/>
 					<TextInput 
 						style={styles.textInput}
@@ -79,9 +84,13 @@ export default class Login extends Component{
 	}
 
 	_signupButton(){
+		const { navigate, dispatch } = this.props.navigation;
+
 		if (this._validateInput(this.state.username) && this._validateInput(this.state.password) && this._validateServer(this.state.server)) {
-			alert('username: ' + this.state.username + '\n' + 'server: http://' + this.state.password + ':8080/api/');	
-			//SharedPreferences.setItem('auth_token', 'response_token');
+
+			//AsyncStorage code here
+			SharedPreferences.setItem('auth_token', 'response_token');
+			dispatch(resetAction);
 		}
 	}
 

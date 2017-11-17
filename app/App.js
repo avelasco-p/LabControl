@@ -3,14 +3,23 @@ import {
   StyleSheet,
 } from 'react-native';
 
-import { StackNavigator } from 'react-navigation';
-
 import Main from './src/LabControl/Main';
+import Navigator from './config/router';
 
 import { 
 	COLOR, 
 	ThemeProvider, 
-} from './node_modules/react-native-material-ui';
+} from 'react-native-material-ui';
+
+export default class App extends Component<{}> {
+  render() {
+    return (
+	<ThemeProvider uiTheme={uiTheme}>
+		<Navigator />
+	 </ThemeProvider>
+    );
+  }
+}
 
 const uiTheme = {
 	palette: {
@@ -23,16 +32,6 @@ const uiTheme = {
 		},
 	},	
 };
-
-export default class App extends Component<{}> {
-  render() {
-    return (
-	<ThemeProvider uiTheme={uiTheme}>
-		<Main />
-	 </ThemeProvider>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {

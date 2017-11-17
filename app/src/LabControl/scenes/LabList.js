@@ -17,7 +17,17 @@ import {
 	Toolbar,
 } from 'react-native-material-ui';
 
+import { NavigationActions } from 'react-navigation';
+
 let SharedPreferences = require('react-native-shared-preferences');
+
+const resetAction = NavigationActions.reset({
+	index: 0,
+	actions: [
+		NavigationActions.navigate({ routeName: 'Main'  }),
+	],
+});
+
 
 fetchData = () => {
 	alert('fetching data');	
@@ -51,21 +61,20 @@ export default class LabList extends Component{
 			alert('ended refreshing');
 		});*/
 	}
-
-	_logout(){
-		SharedPreferences.removeItem('auth_token');			
-		alert('exiting to login')
-	}
-
+	
 	render(){
-		const { auth } = this.props;
+		const { token } = this.props;
+		const { navigate, dispatch } = this.props.navigation;
 
 		return (
 			<View style={styles.mainContainer}>
 				<Toolbar 
 					centerElement="Laboratorios"	
 					rightElement='exit-to-app' //more-vert is another option
-					onRightElementPress={this._logout.bind(this)}
+					onRightElementPress={() => {
+						SharedPreferences.removeItem('auth_token');			
+						dispatch(resetAction);
+					}}
 				/>	
 				<View style={styles.listContainer}>
 					<ListView 
@@ -91,7 +100,10 @@ export default class LabList extends Component{
 	}
 
 	_listItemPress(data){
-		alert('Pressed: ' + data);			
+		const { navigate } = this.props.navigation;
+		navigate('LabDetail', {
+			name: data,
+		});
 	}
 }
 

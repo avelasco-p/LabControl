@@ -17,12 +17,11 @@ import {
 	Button,
 } from 'react-native-material-ui';
 
-let SharedPreferences = require('react-native-shared-preferences');
-
 //components
 import Login from './scenes/Login';
 import LabList from './scenes/LabList';
 
+let SharedPreferences = require('react-native-shared-preferences');
 
 export default class Main extends Component{
 	constructor(props){
@@ -40,14 +39,15 @@ export default class Main extends Component{
 	}
 
 	render(){
+		const { navigate } = this.props.navigation;
+
 		if (this.state.token == null) {
 			return (
-				//<Login />
-				<LabList />
+				<Login {...this.props} />	
 			)	
 		}else{
 			return(
-				<LabList auth={this.state.token} />
+				<LabList {...this.props} token={this.state.token}/>
 			)		
 		}
 	}
