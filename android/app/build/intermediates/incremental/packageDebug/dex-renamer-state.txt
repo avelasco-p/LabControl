@@ -1,0 +1,4 @@
+#Wed Nov 15 23:49:52 CST 2017
+base.0=/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+renamed.0=classes.dex
+file.0=/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
