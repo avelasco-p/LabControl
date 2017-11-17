@@ -1,33 +1,16 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
-  Text,
-  Image,
-  View
 } from 'react-native';
-import Main from './src/LabControl/Main';
 
-import { Navigator, NativeModules } from 'react-native';
+import { StackNavigator } from 'react-navigation';
+
+import Main from './src/LabControl/Main';
 
 import { 
 	COLOR, 
 	ThemeProvider, 
-	Toolbar,
-	Card,
 } from './node_modules/react-native-material-ui';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 const uiTheme = {
 	palette: {
@@ -36,7 +19,7 @@ const uiTheme = {
 	},
 	toolbar: {
 		container: {
-			height: 50,
+			height: 55,
 		},
 	},	
 };

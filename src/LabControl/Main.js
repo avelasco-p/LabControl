@@ -15,13 +15,13 @@ import {
 	ThemeProvider,
 	ActionButton,
 	Button,
-} from '../../node_modules/react-native-material-ui';
+} from 'react-native-material-ui';
 
-let SharedPreferences = require('../../node_modules/react-native-shared-preferences');
+let SharedPreferences = require('react-native-shared-preferences');
 
 //components
-import Login from './Login';
-import LabList from './LabList';
+import Login from './scenes/Login';
+import LabList from './scenes/LabList';
 
 
 export default class Main extends Component{

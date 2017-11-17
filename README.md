@@ -1,2 +1,2 @@
 # LabControl
-project to control check and control heat, doors, and other artifacts from a room
+project to check and control heat, doors, and other artifacts from a room

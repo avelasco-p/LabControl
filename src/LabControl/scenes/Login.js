@@ -11,9 +11,13 @@ import {
 	COLOR, 
 	ThemeProvider,
 	Button,
-} from '../../node_modules/react-native-material-ui';
+} from 'react-native-material-ui';
 
-let SharedPreferences = require('../../node_modules/react-native-shared-preferences');
+import {
+	StackNavigator,
+} from 'react-navigation';
+
+let SharedPreferences = require('react-native-shared-preferences');
 
 export default class Login extends Component{
 	constructor(props){
@@ -77,6 +81,7 @@ export default class Login extends Component{
 	_signupButton(){
 		if (this._validateInput(this.state.username) && this._validateInput(this.state.password) && this._validateServer(this.state.server)) {
 			alert('username: ' + this.state.username + '\n' + 'server: http://' + this.state.password + ':8080/api/');	
+			//SharedPreferences.setItem('auth_token', 'response_token');
 		}
 	}
 
