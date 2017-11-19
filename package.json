@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "16.0.0",
     "react-native": "0.50.3",
+    "react-native-loading-spinner-overlay": "^0.5.2",
     "react-native-material-ui": "^1.14.0",
     "react-native-shared-preferences": "^1.0.0",
     "react-native-snackbar": "^0.4.4",
