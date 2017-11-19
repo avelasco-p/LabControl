@@ -14,7 +14,7 @@ import {
 } from 'react-native-material-ui';
 
 import SensorView from '../components/SensorView';
-
+import Snackbar from 'react-native-snackbar';
 
 const backAction = NavigationActions.back();
 
@@ -26,11 +26,14 @@ export default class LabDetail extends Component {
 	render(){
 		const { dispatch, navigate } = this.props.navigation;
 		const { params } = this.props.navigation.state;
+		Snackbar.show({
+			title: 'room: ' + params.room,
+		});
 		
 		return(
 			<View style={styles.mainContainer}>
 				<Toolbar
-					centerElement={ params.name }
+					centerElement={ params.room }
 					leftElement='arrow-back'
 					onLeftElementPress={() => {
 						dispatch(backAction);

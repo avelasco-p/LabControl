@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { 
+	ActivityIndicator,
 	Navigator, 
 	Text,
 	View,
@@ -14,6 +15,8 @@ import {
 } from 'react-native-material-ui';
 
 import { NavigationActions } from 'react-navigation';
+import Snackbar from 'react-native-snackbar';
+import Spinner from 'react-native-loading-spinner-overlay';
 
 let SharedPreferences = require('react-native-shared-preferences');
 
@@ -32,6 +35,7 @@ export default class Login extends Component{
 			username: '',
 			password: '',
 			server: '',
+			loading: false,
 		};
 	}
 
@@ -39,6 +43,11 @@ export default class Login extends Component{
 		return (
 			<View style={styles.mainContainer}>
 				<View style={styles.firstContainer}>
+					<ActivityIndicator
+						animating={this.state.loading}
+						color='white'
+						size='large'
+					/>
 				</View>
 				<View style={styles.secondContainer}>
 					<TextInput 
@@ -89,8 +98,40 @@ export default class Login extends Component{
 		if (this._validateInput(this.state.username) && this._validateInput(this.state.password) && this._validateServer(this.state.server)) {
 
 			//AsyncStorage code here
-			SharedPreferences.setItem('auth_token', 'response_token');
-			dispatch(resetAction);
+			this.setState({loading: true});
+
+			fetch('http://' + this.state.server + ':8080/api/login/', {
+				method: 'POST',
+				headers:{
+					'Accept':'application/json',
+					'Content-Type' : 'application/json',
+				},
+				body: JSON.stringify({
+					username: this.state.username,
+					password: this.state.password,
+				}),
+			})
+			.then((response) => response.json())
+			.then((responseJson) => {
+				this.setState({loading:false});
+				if (responseJson.sucess) {
+					SharedPreferences.setItem('auth_token', responseJson.token)	;	
+					dispatch(resetAction);
+				}else{
+					Snackbar.show({
+						title: 'Error autentificando',
+					});
+				}
+			})
+			.catch((error) => {
+				Snackbar.show({
+					title: 'Ha habido un error, cargando data falsa',
+				});
+				this.setState({loading:false});
+				//to delete
+				SharedPreferences.setItem('auth_token', 'token');
+				dispatch(resetAction);
+			});
 		}
 	}
 
@@ -98,15 +139,21 @@ export default class Login extends Component{
 		if (text != '') {
 			return true;
 		}
-		alert('Campo vacio');
+		Snackbar.show({
+			title: 'Error: algunos campos están vacios.',
+		});
+		
 		return false;
 	}
 
 	_validateServer(server){
 		if (server.match(/(\d+\.){3}\d+/g) != null) {
+			SharedPreferences.setItem('server', server);
 			return true;	
 		}
-		alert('dirección de server no cumple con los requisitos: (IPv4) XXX.XXX.XXX.XXX');
+		Snackbar.show({
+			title: 'El campo del servidor no tiene un formato IPv4',
+		});
 		return false;
 	}
 }
@@ -117,7 +164,7 @@ const styles = StyleSheet.create({
 		backgroundColor: COLOR.blue500,
 	},
 	firstContainer: {
-		flex: 2,
+		flex: 3,
 		margin: 20,
 		justifyContent: 'center',
 	},

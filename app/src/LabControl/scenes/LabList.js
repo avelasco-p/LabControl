@@ -18,6 +18,7 @@ import {
 } from 'react-native-material-ui';
 
 import { NavigationActions } from 'react-navigation';
+import Snackbar from 'react-native-snackbar';
 
 let SharedPreferences = require('react-native-shared-preferences');
 
@@ -28,20 +29,39 @@ const resetAction = NavigationActions.reset({
 	],
 });
 
+let server, token;
 
-fetchData = () => {
-	alert('fetching data');	
-};
-
+function fetchMyRooms(url){
+	return fetch(url, {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(token: token),
+	})
+	.then((response) => reponse.json())
+	.then((responseJson) => {
+		if (responseJson.success) {
+			this.setState({
+				rooms: responseJson.rooms.map((x) => {
+					return x.roomname;			
+				}),
+			});		
+		}	
+	})
+	.catch((error) => {
+		Snackbar.show({ title: 'Ha ocurrido un error ' + server });
+	});
+}
 
 export default class LabList extends Component{
 	constructor(props){
 		super(props);
 
-		let labs = [];
-
 		const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		this.state = {
+			rooms : [],
 			dataSource: ds.cloneWithRows([
 				'Laboratorio 1', 'Laboratorio 2', 'Laboratorio 3', 'Laboratorio 4', 'Laboratorio 5', 'Laboratorio 6',		      
 			]),
@@ -49,22 +69,20 @@ export default class LabList extends Component{
 		};
 	}
 
-	_onRefresh(){
-		this.setState({refreshing: true});	
-		//fetch function here
-		setTimeout(() => {
-			this.setState({refreshing: false});
-		}, 2000);
+	componentWillMount(){
+		SharedPreferences.getItem('server', (value) => {
+			server = value; 
+		});
 
-		/*fetchData().then(() => {
-			this.setState({refreshing: false});	
-			alert('ended refreshing');
-		});*/
-	}
+		SharedPreferences.getItem('auth_token', (value) => {
+			token = value;
+		});
+
+		fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/').then().catch((error) => this.setState({rooms: dataSource}));
+	}	
 	
 	render(){
-		const { token } = this.props;
-		const { navigate, dispatch } = this.props.navigation;
+		const { dispatch } = this.props.navigation;
 
 		return (
 			<View style={styles.mainContainer}>
@@ -86,12 +104,23 @@ export default class LabList extends Component{
 						}
 						dataSource = {this.state.dataSource}
 						renderRow = { 
-							(rowData) => 
-								<ListItem 
-									centerElement={rowData} 
-									divider={true}
-									onPress={this._listItemPress.bind(this, rowData)}
-								/>
+							(rowData) => {
+								if (Math.random() > 0.5) {
+									return <ListItem 
+										centerElement={rowData} 
+										rightElement='record-voice-over'
+										divider={true}
+										onPress={this._listItemPress.bind(this, rowData)}
+									/>			
+								}else{
+									return <ListItem 
+										centerElement={rowData} 
+										rightElement='lock-open'
+										divider={true}
+										onPress={this._listItemPress.bind(this, rowData)}
+									/>
+								}
+							}
 						}
 					/>
 				</View>
@@ -99,12 +128,25 @@ export default class LabList extends Component{
 		);
 	}
 
+	_onRefresh(){
+		this.setState({refreshing: true});	
+
+		//fetch function here
+		fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/');
+		this.setState({refreshing: false});
+	}
+
 	_listItemPress(data){
 		const { navigate } = this.props.navigation;
 		navigate('LabDetail', {
-			name: data,
+			room: this.state.rooms.find(this._findByName, data),
 		});
 	}
+
+	_findByName(element, name){
+		return element ==  name;
+	}
+
 }
 
 const styles = StyleSheet.create({
