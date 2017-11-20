@@ -5,6 +5,7 @@ import {
 	View,
 	TextInput,	
 	ListView,
+	FlatList,
 	StyleSheet,
 	RefreshControl,
 } from 'react-native';
@@ -12,7 +13,7 @@ import {
 import { 
 	COLOR, 
 	ThemeProvider,
-	Button,
+	Buttresponse,
 	ListItem,
 	Toolbar,
 } from 'react-native-material-ui';
@@ -29,44 +30,52 @@ const resetAction = NavigationActions.reset({
 	],
 });
 
-let server, token;
-
-function fetchMyRooms(url){
-	return fetch(url, {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify(token: token),
-	})
-	.then((response) => reponse.json())
-	.then((responseJson) => {
-		if (responseJson.success) {
-			this.setState({
-				rooms: responseJson.rooms.map((x) => {
-					return x.roomname;			
-				}),
-			});		
+function search(name, arr){
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i].roomname == name) {
+			return arr[i];
 		}	
-	})
-	.catch((error) => {
-		Snackbar.show({ title: 'Ha ocurrido un error ' + server });
-	});
+	}
 }
+
+let server, token; 
 
 export default class LabList extends Component{
 	constructor(props){
 		super(props);
 
-		const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 		this.state = {
 			rooms : [],
-			dataSource: ds.cloneWithRows([
-				'Laboratorio 1', 'Laboratorio 2', 'Laboratorio 3', 'Laboratorio 4', 'Laboratorio 5', 'Laboratorio 6',		      
-			]),
 			refreshing: false,			
 		};
+	}
+
+	_fetchMyRooms(url){
+		return fetch(url, {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				token: token,
+			}),
+		})
+		.then((response) => response.json())
+		.then((responseJson) => {
+			if (responseJson.success) {
+				let newrooms = responseJson.rooms.map((x) => {
+					return x.roomname;
+				});
+
+				this.setState({ rooms: responseJson.rooms });
+			}else{
+				Snackbar.show({ title: responseJson.message });
+			}	
+		})
+		.catch((error) => {
+			Snackbar.show({ title: error.toString() + '. Try to refresh list' });
+		});
 	}
 
 	componentWillMount(){
@@ -78,9 +87,9 @@ export default class LabList extends Component{
 			token = value;
 		});
 
-		fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/').then().catch((error) => this.setState({rooms: dataSource}));
+		this._onRefresh();
 	}	
-	
+
 	render(){
 		const { dispatch } = this.props.navigation;
 
@@ -95,29 +104,40 @@ export default class LabList extends Component{
 					}}
 				/>	
 				<View style={styles.listContainer}>
-					<ListView 
+					<FlatList 
 						refreshControl={
 							<RefreshControl
 								refreshing={this.state.refreshing}
 								onRefresh={this._onRefresh.bind(this)}
 							/>
 						}
-						dataSource = {this.state.dataSource}
-						renderRow = { 
-							(rowData) => {
-								if (Math.random() > 0.5) {
+						data = {this.state.rooms}
+						keyExtractor={ (item, index) => index }
+						renderItem = { 
+							( rowData ) => {
+								let room = search(rowData.item.roomname, this.state.rooms);
+
+								//to change condition
+								if (room.status == 0) {
 									return <ListItem 
-										centerElement={rowData} 
-										rightElement='record-voice-over'
+										centerElement={room.roomname} 
+										rightElement='lock'
 										divider={true}
-										onPress={this._listItemPress.bind(this, rowData)}
+										onPress={this._listItemPress.bind(this, room)}
 									/>			
-								}else{
+								}else if (room.status == 1){
 									return <ListItem 
-										centerElement={rowData} 
+										centerElement={room.roomname} 
 										rightElement='lock-open'
 										divider={true}
-										onPress={this._listItemPress.bind(this, rowData)}
+										onPress={this._listItemPress.bind(this, room)}
+									/>
+								}else{
+									return <ListItem 
+										centerElement={room.roomname} 
+										rightElement='do-not-disturb-on'
+										divider={true}
+										onPress={this._listItemPress.bind(this, room)}
 									/>
 								}
 							}
@@ -132,21 +152,17 @@ export default class LabList extends Component{
 		this.setState({refreshing: true});	
 
 		//fetch function here
-		fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/');
-		this.setState({refreshing: false});
+		this._fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/')
+		.then(this.setState({ refreshing: false }));
 	}
 
 	_listItemPress(data){
 		const { navigate } = this.props.navigation;
+		
 		navigate('LabDetail', {
-			room: this.state.rooms.find(this._findByName, data),
+			room: data,
 		});
 	}
-
-	_findByName(element, name){
-		return element ==  name;
-	}
-
 }
 
 const styles = StyleSheet.create({

@@ -23,7 +23,7 @@ let SharedPreferences = require('react-native-shared-preferences');
 const resetAction = NavigationActions.reset({
 	index: 0,
 	actions: [
-		NavigationActions.navigate({ routeName: 'LabList' }),
+		NavigationActions.navigate({ routeName: 'Main' }),
 	],
 });
 
@@ -113,13 +113,13 @@ export default class Login extends Component{
 			})
 			.then((response) => response.json())
 			.then((responseJson) => {
-				this.setState({loading:false});
-				if (responseJson.sucess) {
+				this.setState({ loading:false });
+				if (responseJson.success) {
 					SharedPreferences.setItem('auth_token', responseJson.token)	;	
 					dispatch(resetAction);
 				}else{
 					Snackbar.show({
-						title: 'Error autentificando',
+						title: 'Error autentificando: ' + responseJson.message,
 					});
 				}
 			})
@@ -127,10 +127,7 @@ export default class Login extends Component{
 				Snackbar.show({
 					title: 'Ha habido un error, cargando data falsa',
 				});
-				this.setState({loading:false});
-				//to delete
-				SharedPreferences.setItem('auth_token', 'token');
-				dispatch(resetAction);
+				this.setState({ loading:false });
 			});
 		}
 	}

@@ -15,17 +15,17 @@ export default class SensorView extends Component {
 	constructor(props){
 		super(props);
 
-		this.state = {
-				
+		this.state = {	
 		};
 	}
 
 	render(){
-		const { value, icon, action } = this.props;
+		const { value, icon, action, params, room } = this.props;
 
 		return(
 			<Card style={{ container: { flex:1, justifyContent: 'center', } }}>
 				<Text style={styles.header}>{ value }</Text>
+				<Text style={styles.header}>{ room.status }</Text>
 			</Card>	
 		)
 	}
