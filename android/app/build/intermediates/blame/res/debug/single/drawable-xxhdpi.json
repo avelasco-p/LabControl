@@ -96,6 +96,10 @@
         "source": "/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-xxhdpi/abc_list_divider_mtrl_alpha.9.png"
     },
     {
+        "merged": "/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi/node_modules_reactnavigation_src_views_assets_backicon.png",
+        "source": "/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/src/main/res/drawable-xxhdpi/node_modules_reactnavigation_src_views_assets_backicon.png"
+    },
+    {
         "merged": "/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/res/merged/debug/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_015.png",
         "source": "/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/drawable-xxhdpi/abc_btn_radio_to_on_mtrl_015.png"
     },

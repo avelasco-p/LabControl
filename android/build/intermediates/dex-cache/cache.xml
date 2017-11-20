@@ -133,7 +133,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
+        sha1="ee92e255dcd813c08213aad584450af5dbd00326">
         <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-vector-icons-unspecified_5588f0877b219dcd407d3ef441fb20614c73410d.jar" />
     </item>
     <item
@@ -187,7 +187,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="4207f5e662edfd866c89fa1290585532c1c4c91c">
+        sha1="aa0fc7b726ccf32345d88f00cba3615d8d6cb826">
         <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-snackbar-unspecified_2273ff030876fcc5d7786855fdf4aed55c9b57f0.jar" />
     </item>
     <item
@@ -376,7 +376,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.2"
-        sha1="4fa9db7c15f7bbbd3e2f6457857e2ff618970e93">
+        sha1="8dfab1e0d1f7f509ffc8da90c070286c725b5013">
         <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-shared-preferences-unspecified_4d041dde1f532734dfdd9c58308ceb008be55d2c.jar" />
     </item>
     <item
