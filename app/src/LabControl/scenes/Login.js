@@ -3,6 +3,7 @@ import {
 	ActivityIndicator,
 	Navigator, 
 	Text,
+	Image,
 	View,
 	TextInput,	
 	StyleSheet,
@@ -42,6 +43,16 @@ export default class Login extends Component{
 	render(){
 		return (
 			<View style={styles.mainContainer}>
+				<Image 
+					style={{
+						flex: 1,
+						position: 'absolute',
+						width: '100%',
+						height: '100%',
+						justifyContent: 'center',
+					}}	
+					source={require('../../../res/img/LOGIN.png')}
+				/>
 				<View style={styles.firstContainer}>
 					<ActivityIndicator
 						animating={this.state.loading}
@@ -102,7 +113,7 @@ export default class Login extends Component{
 
 			fetch('http://' + this.state.server + ':8080/api/login/', {
 				method: 'POST',
-				headers:{
+				headers: {
 					'Accept':'application/json',
 					'Content-Type' : 'application/json',
 				},
@@ -125,7 +136,7 @@ export default class Login extends Component{
 			})
 			.catch((error) => {
 				Snackbar.show({
-					title: 'Ha habido un error, cargando data falsa',
+					title: 'Ha habido un error',
 				});
 				this.setState({ loading:false });
 			});

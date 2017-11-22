@@ -26,7 +26,7 @@ let SharedPreferences = require('react-native-shared-preferences');
 const resetAction = NavigationActions.reset({
 	index: 0,
 	actions: [
-		NavigationActions.navigate({ routeName: 'Main'  }),
+		NavigationActions.navigate({ routeName: 'Main' }),
 	],
 });
 
@@ -64,10 +64,6 @@ export default class LabList extends Component{
 		.then((response) => response.json())
 		.then((responseJson) => {
 			if (responseJson.success) {
-				let newrooms = responseJson.rooms.map((x) => {
-					return x.roomname;
-				});
-
 				this.setState({ rooms: responseJson.rooms });
 			}else{
 				Snackbar.show({ title: responseJson.message });
@@ -86,9 +82,11 @@ export default class LabList extends Component{
 		SharedPreferences.getItem('auth_token', (value) => {
 			token = value;
 		});
-
-		this._onRefresh();
 	}	
+
+	componentDidMount(){
+		this._onRefresh();
+	}
 
 	render(){
 		const { dispatch } = this.props.navigation;

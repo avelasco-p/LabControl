@@ -23,8 +23,8 @@ export default class App extends Component<{}> {
 
 const uiTheme = {
 	palette: {
-		primaryColor: COLOR.blue500,
-		accentColor: COLOR.orange500,
+		primaryColor: '#0095a5',
+		accentColor: '#ef7a08',
 	},
 	toolbar: {
 		container: {
