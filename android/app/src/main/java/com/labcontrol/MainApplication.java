@@ -2,11 +2,7 @@ package com.labcontrol;
 
 import android.app.Application;
 
-import in.sriraman.sharedpreferences.RNSharedPreferencesReactPackage;
-
 import com.facebook.react.ReactApplication;
-import com.azendoo.reactnativesnackbar.SnackbarPackage;
-import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,10 +22,7 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new SnackbarPackage(),
-		  new RNSharedPreferencesReactPackage(),
-            new VectorIconsPackage()
+          new MainReactPackage()
       );
     }
 

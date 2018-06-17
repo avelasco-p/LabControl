@@ -3,471 +3,192 @@
 
     <item
         is-multidex="false"
-        jar="/home/alejandro/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/support-annotations-25.1.0_fd937385ae19a2e36f9f2d93174d01831fa58c04.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_aa4b3b83f6acd534581a7c27ebe3390b1d1a7e66.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/LabControl/react-native-shared-preferences/unspecified/jars/classes.jar"
+        jar="/home/fernando/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="4fa9db7c15f7bbbd3e2f6457857e2ff618970e93">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-shared-preferences-unspecified_4d041dde1f532734dfdd9c58308ceb008be55d2c.jar" />
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_7037e0a35d91db41a90a06c2fbcb6d50216ebb31.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_00de3e313e0017599ec6f43c1c5467148ad01e56.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_915e123c8d7f341f1add2d4c052f16d4cde96c3a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.1.0_fe826357acea09c989e5383e5b95d1552ad980c9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_c8fa0f4562e16ad57a96cd7ab586b045285b4bd6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.1.0_3c4b268e5bc3136890db728df0ae70a217a46567.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_c567ee6665fb1623ae923eb0792e93c6658c77d0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b266c8faa5af72e579b9da36ef35053ffed6ac64">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-25.1.0_9fc38fcd2ef9df2694ed16226aa37c401b03cca1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_eb02f385454f8ea3b910e69ccccf8be5671634c8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_579693bd4bad009bd5c75866dccec6fd4674c9df.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3ad31e29afa9c2e9e2b50013de052b82704d24b0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_579693bd4bad009bd5c75866dccec6fd4674c9df.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/LabControl/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ee92e255dcd813c08213aad584450af5dbd00326">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-vector-icons-unspecified_5588f0877b219dcd407d3ef441fb20614c73410d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_f88de31999d6b10c22edc0faf317ff3454327f5f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_68af6b907afb1fd7f1ab5e48cdf08df8f188bf5c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.1.0_4649943846b14a7c1dc355938998a99e007679b1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_8916824b0c0360455f4a224b785a9847607e4638.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_04a91871fe9bd211601b07811ad65133356c9e8d.jar" />
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_286ff1e4819721dcf1816a19747b5f45acb82773.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/LabControl/react-native-snackbar/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aa0fc7b726ccf32345d88f00cba3615d8d6cb826">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-snackbar-unspecified_2273ff030876fcc5d7786855fdf4aed55c9b57f0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/design/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="30103d98fa5ed824b54af839c85e2111f9bde8ec">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-design-25.1.0_ee25056a083bb75e967ba01093d38c9268c15f18.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.1.0_1615d09bdf8cf60410b3a4bb17dd7449d0c11c11.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_00de3e313e0017599ec6f43c1c5467148ad01e56.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_f28b58a53a5347252dba55020c7acc129b095a9b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_91609c45f5689c05c5b1af2087a64c2c3c3f1dfc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.1.0_9d82d9b15157c48d3c1260be665affd39827fc54.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/transition/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d38084015027549951cbaea5d5f6fb795cc81151">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-transition-25.1.0_cf0450bd9202310240e5092ff22d358b1783ca31.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_0e1c1942d0c8e6caec01b63b0d16b9c68d34e8cc.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_c8fa0f4562e16ad57a96cd7ab586b045285b4bd6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_8be2dd048281ebd5fd39661a669cd0a430ec4a8e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.1.0_0d1ad9935377b192293c12f0344b1450a019c6bd.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_eb02f385454f8ea3b910e69ccccf8be5671634c8.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_915e123c8d7f341f1add2d4c052f16d4cde96c3a.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_6dee1777e875c10cf8b2b07b983bd30a2cac9a63.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_68af6b907afb1fd7f1ab5e48cdf08df8f188bf5c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_3ad31e29afa9c2e9e2b50013de052b82704d24b0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.1.0_b97aecd8f55b2368490f035db08ae86718d5ae4e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/LabControl/react-native-vector-icons/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="f2cf527de8d0bd35d72088fafea02395ba4a9eec">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-vector-icons-unspecified_5588f0877b219dcd407d3ef441fb20614c73410d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.1.0_0f024fa3c13ee5e315fa8eb0795ff862b4ac6c85.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/libs/infer-annotations-4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
         sha1="9809e90be788acdb479b2b44e2112f3295a03068">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_c567ee6665fb1623ae923eb0792e93c6658c77d0.jar" />
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_dbae11810786960a9ca67ce41df5fd309720ebc4.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/LabControl/react-native-shared-preferences/unspecified/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8dfab1e0d1f7f509ffc8da90c070286c725b5013">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/LabControl-react-native-shared-preferences-unspecified_4d041dde1f532734dfdd9c58308ceb008be55d2c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.1.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.1.0_b0c44f524476fd8379de47a769fb4a83f0cc0399.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_91609c45f5689c05c5b1af2087a64c2c3c3f1dfc.jar" />
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_37a0900236a88f88bf2f453844ff188e4cbcd26e.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="6975da39a7040257bd51d21a231b76c915872d38">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_8be2dd048281ebd5fd39661a669cd0a430ec4a8e.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.1"
-        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_f28b58a53a5347252dba55020c7acc129b095a9b.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_f88de31999d6b10c22edc0faf317ff3454327f5f.jar" />
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_bbd829f3ae07aef2db78a5f8fe2e0ca15817ce33.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
-        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_0e1c1942d0c8e6caec01b63b0d16b9c68d34e8cc.jar" />
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_7be3d694813776585cc66d1dc2b72a0972e3f1b8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_aba3bdec22d82e7de8a94e1cc172d0ff8636202f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_a164121b1e7e4dad26c8d5102d53b2c30c24d432.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_979fc71f0bb1969777acd98550c0aa115696fc47.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="8f615bca00639150c9eb6175d4b5471193f70794">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_aa4b3b83f6acd534581a7c27ebe3390b1d1a7e66.jar" />
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_ee1ab9c01869441b72f99f760bd5cc9c0a643577.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_8916824b0c0360455f4a224b785a9847607e4638.jar" />
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_ae8d392ced06ab1f37507f191101014cd645b1f8.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_0d48c25494080a101e182437c48c9b437694667b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_60ce844b5f9ffec374e6ace72c36974f3c817f55.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
         revision="23.0.1"
         sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_6dee1777e875c10cf8b2b07b983bd30a2cac9a63.jar" />
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_a21daba3c3a05dab46e54c71bd64e919ba8b9a42.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="/home/alejandro/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
         jumboMode="false"
         optimize="true"
-        revision="25.0.2"
-        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
-        <dex dex="/home/alejandro/Documents/Universidad/Programacion de Artefactos/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_04a91871fe9bd211601b07811ad65133356c9e8d.jar" />
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_44f2fcd5a1c830cfe318b7969dd60c6f50dc58f9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_fb48b3247374b673a3450bab31c3bb6f79ee76a7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_8bf3cee415d957debcfa38858e6bc10e77dfecdc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_853ac3b4cb71e86cc1efd967159155ecffb0e58a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/Code/git/LabControl/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.50.3/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="24303e5ddb2c1210dd7e8db9dbab018f50313e48">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.50.3_1d583a5af6f45e266b5f59ab631a8c675d8be99d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_8cf63019d065dd63902b15e65724652b5c73225e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/fernando/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/home/fernando/Code/git/LabControl/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_e24c5d925ac765668ffaa7c416adfdade0ceedd6.jar" />
     </item>
 
 </items>

@@ -36,7 +36,6 @@ export default class Main extends Component{
 		SharedPreferences.getItem("auth_token", (value) => {
 			this.setState({ token: value });
 		});	
-
 		console.log('component will mount');
 	}
 

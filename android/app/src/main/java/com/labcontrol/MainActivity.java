@@ -2,8 +2,6 @@ package com.labcontrol;
 
 import com.facebook.react.ReactActivity;
 
-import in.sriraman.sharedpreferences.RNSharedPreferencesReactPackage;
-
 public class MainActivity extends ReactActivity {
 
     /**

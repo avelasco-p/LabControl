@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -36,19 +37,6 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		352B3FACA2864637B65C79D2 /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5161F591F9043138560DD47 /* libRNVectorIcons.a */; };
-		692EBC114BB946D1A4C7FA1F /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5AE134FFEDF488090A5F983 /* Entypo.ttf */; };
-		73471F8B05E346F6B72FFEEB /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D8EEED914F794D389CF2E79D /* EvilIcons.ttf */; };
-		923B950FBB1E44CBA96DCF2A /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD4FBD25B3FA4C5DB781EE62 /* Feather.ttf */; };
-		4CC1E191E68A4FFCBB1FDB04 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88236FB2A2D8464E83778A25 /* FontAwesome.ttf */; };
-		D1F016F109C34501B33487D8 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9AE27B43FDB432B8C924BBB /* Foundation.ttf */; };
-		70256C2970C64DDAAD14EF96 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52840DAB34354C8A8EF19A80 /* Ionicons.ttf */; };
-		EB53E75E30AA4293B1FFC061 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B994BC988F8A47A0909826D4 /* MaterialCommunityIcons.ttf */; };
-		57388BAEC26545B1855B3021 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A9E9518CAB54B97B6439DAC /* MaterialIcons.ttf */; };
-		4E63D8AA00CF4C25B67A68B1 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1DF3231BDE214AEAA9BB3748 /* Octicons.ttf */; };
-		6711A159E5484EAAB1A5F3E3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F206A78435641C7B017959B /* SimpleLineIcons.ttf */; };
-		22B834A836E84054B109A4CA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C736DEC39CF44E998E3C2B43 /* Zocial.ttf */; };
-		57B627F2A3E243C382BCD478 /* libRNSnackbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 98229F94CC624667AD402C7E /* libRNSnackbar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,21 +264,6 @@
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
-		6D681FF22D0B4F47BE0710DE /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		F5161F591F9043138560DD47 /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
-		C5AE134FFEDF488090A5F983 /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D8EEED914F794D389CF2E79D /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		CD4FBD25B3FA4C5DB781EE62 /* Feather.ttf */ = {isa = PBXFileReference; name = "Feather.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		88236FB2A2D8464E83778A25 /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F9AE27B43FDB432B8C924BBB /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		52840DAB34354C8A8EF19A80 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B994BC988F8A47A0909826D4 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2A9E9518CAB54B97B6439DAC /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		1DF3231BDE214AEAA9BB3748 /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		0F206A78435641C7B017959B /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C736DEC39CF44E998E3C2B43 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		97ADC65F47214A9889D3B598 /* RNSnackbar.xcodeproj */ = {isa = PBXFileReference; name = "RNSnackbar.xcodeproj"; path = "../node_modules/react-native-snackbar/ios/RNSnackbar.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
-		98229F94CC624667AD402C7E /* libRNSnackbar.a */ = {isa = PBXFileReference; name = "libRNSnackbar.a"; path = "libRNSnackbar.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,8 +292,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				352B3FACA2864637B65C79D2 /* libRNVectorIcons.a in Frameworks */,
-				57B627F2A3E243C382BCD478 /* libRNSnackbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,8 +460,6 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
-				6D681FF22D0B4F47BE0710DE /* RNVectorIcons.xcodeproj */,
-				97ADC65F47214A9889D3B598 /* RNSnackbar.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -511,7 +480,6 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* LabControlTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				54C58D96593A4396AB953DCA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -536,25 +504,6 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
-		};
-		54C58D96593A4396AB953DCA /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				C5AE134FFEDF488090A5F983 /* Entypo.ttf */,
-				D8EEED914F794D389CF2E79D /* EvilIcons.ttf */,
-				CD4FBD25B3FA4C5DB781EE62 /* Feather.ttf */,
-				88236FB2A2D8464E83778A25 /* FontAwesome.ttf */,
-				F9AE27B43FDB432B8C924BBB /* Foundation.ttf */,
-				52840DAB34354C8A8EF19A80 /* Ionicons.ttf */,
-				B994BC988F8A47A0909826D4 /* MaterialCommunityIcons.ttf */,
-				2A9E9518CAB54B97B6439DAC /* MaterialIcons.ttf */,
-				1DF3231BDE214AEAA9BB3748 /* Octicons.ttf */,
-				0F206A78435641C7B017959B /* SimpleLineIcons.ttf */,
-				C736DEC39CF44E998E3C2B43 /* Zocial.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -637,7 +586,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 610;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -925,17 +874,6 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				692EBC114BB946D1A4C7FA1F /* Entypo.ttf in Resources */,
-				73471F8B05E346F6B72FFEEB /* EvilIcons.ttf in Resources */,
-				923B950FBB1E44CBA96DCF2A /* Feather.ttf in Resources */,
-				4CC1E191E68A4FFCBB1FDB04 /* FontAwesome.ttf in Resources */,
-				D1F016F109C34501B33487D8 /* Foundation.ttf in Resources */,
-				70256C2970C64DDAAD14EF96 /* Ionicons.ttf in Resources */,
-				EB53E75E30AA4293B1FFC061 /* MaterialCommunityIcons.ttf in Resources */,
-				57388BAEC26545B1855B3021 /* MaterialIcons.ttf in Resources */,
-				4E63D8AA00CF4C25B67A68B1 /* Octicons.ttf in Resources */,
-				6711A159E5484EAAB1A5F3E3 /* SimpleLineIcons.ttf in Resources */,
-				22B834A836E84054B109A4CA /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,16 +1005,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabControl.app/LabControl";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1094,16 +1022,6 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabControl.app/LabControl";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1122,11 +1040,6 @@
 				);
 				PRODUCT_NAME = LabControl;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1144,11 +1057,6 @@
 				);
 				PRODUCT_NAME = LabControl;
 				VERSIONING_SYSTEM = "apple-generic";
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1175,16 +1083,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Debug;
 		};
@@ -1211,16 +1109,6 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
-					"$(SRCROOT)/../node_modules/react-native-snackbar/ios",
-				);
 			};
 			name = Release;
 		};
@@ -1242,11 +1130,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabControl-tvOS.app/LabControl-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Debug;
 		};
@@ -1268,11 +1151,6 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LabControl-tvOS.app/LabControl-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-					"\"$(SRCROOT)/$(TARGET_NAME)\"",
-				);
 			};
 			name = Release;
 		};
