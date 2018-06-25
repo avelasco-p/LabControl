@@ -41,6 +41,14 @@ export default class LabList extends Component{
 			rooms : [],
 			refreshing: false,			
 		};
+
+		SharedPreferences.getItem('server', (value) => {
+			server = value; 
+		});
+
+		SharedPreferences.getItem('auth_token', (value) => {
+			token = value;
+		});
 	}
 
 	_fetchMyRooms(url){
@@ -67,16 +75,6 @@ export default class LabList extends Component{
 		});
 	}
 
-	componentWillMount(){
-		SharedPreferences.getItem('server', (value) => {
-			server = value; 
-		});
-
-		SharedPreferences.getItem('auth_token', (value) => {
-			token = value;
-		});
-	}	
-
 	componentDidMount(){
 		this._onRefresh();
 	}
@@ -99,38 +97,41 @@ export default class LabList extends Component{
 						refreshControl={
 							<RefreshControl
 								refreshing={this.state.refreshing}
-								onRefresh={this._onRefresh.bind(this)}
-							/>
+								onRefresh={this._onRefresh.bind(this)}/>
 						}
 						data = {this.state.rooms}
-						keyExtractor={ (item, index) => index }
+						keyExtractor={(item, index) => index.toString()}
 						renderItem = { 
 							( rowData ) => {
-								let room = search(rowData.item.roomname, this.state.rooms);
-
+								let room = _.find(this.state.rooms,
+												  (r) => r.roomname === rowData.item.roomname);
 								//to change condition
-								if (room.status == 0) {
-									return <ListItem 
-										centerElement={room.roomname} 
-										rightElement='lock'
-										divider={true}
-										onPress={this._listItemPress.bind(this, room)}
-									/>			
-								}else if (room.status == 1){
-									return <ListItem 
-										centerElement={room.roomname} 
-										rightElement='lock-open'
-										divider={true}
-										onPress={this._listItemPress.bind(this, room)}
-									/>
-								}else{
-									return <ListItem 
-										centerElement={room.roomname} 
-										rightElement='do-not-disturb-on'
-										divider={true}
-										onPress={this._listItemPress.bind(this, room)}
-									/>
+								if (room.status === 0) {
+									return (
+										<ListItem 
+										  centerElement={room.roomname} 
+										  rightElement='lock'
+										  divider={true}
+										  onPress={this._listItemPress.bind(this, room)}/>			
+									);
 								}
+								if (room.status === 1){
+									return (
+										<ListItem 
+										  centerElement={room.roomname} 
+										  rightElement='lock-open'
+										  divider={true}
+										  onPress={this._listItemPress.bind(this, room)}/>
+									);
+								}
+								return (
+									<ListItem 
+									  centerElement={room.roomname} 
+									  rightElement='do-not-disturb-on'
+									  divider={true}
+									  onPress={this._listItemPress.bind(this, room)}/>
+								);
+							
 							}
 						}
 					/>
@@ -144,7 +145,8 @@ export default class LabList extends Component{
 
 		//fetch function here
 		this._fetchMyRooms('http://' + server + ':8080/api/fetch_my_rooms/')
-		.then(this.setState({ refreshing: false }));
+			.then(this.setState({ refreshing: false }))
+			.catch((err) => console.log('error-fetching-rooms:', err));
 	}
 
 	_listItemPress(data){
