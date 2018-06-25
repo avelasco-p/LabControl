@@ -32,7 +32,7 @@ let token, server;
 export default class LabDetail extends Component {
 	constructor(props){
 		super(props);
-		this.invertal = null;
+		this.interval = null;
 
 		this.state = {
 			status: 3,
@@ -109,44 +109,47 @@ export default class LabDetail extends Component {
 					duration: Snackbar.LENGTH_LONG, 
 				});
 			}
-		});
+		}).catch((err) => console.log(err));
 	}
 
 	_changeState(url, status){
-		return fetch(url, {
-			method: 'POST',
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify({
-				token: token,
-			}),
-		})
-		.then((response) => response.json())
-		.then((responseJson) => {
-			if (responseJson.success) {
-				this._updateToolbar(status);
-				Snackbar.show({ title: 'Cambiado con exito. '});	
-			}else{
-				Snackbar.show({ 
-					title: responseJson.message, 
-					duration: Snackbar.LENGTH_LONG, 
-				});
-			}
-		})
-		.catch((error) => {
-			Snackbar.show({ title: responseJson.message });
-			return error;
+		return navigator.geolocation.getCurrentPosition((pos) => {
+			return fetch(url, {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					token: token,
+					position: pos
+				}),
+			})
+			.then((response) => response.json())
+			.then((responseJson) => {
+				if (responseJson.success) {
+					this._updateToolbar(status);
+					Snackbar.show({ title: 'Cambiado con exito. '});	
+				}else{
+					Snackbar.show({ 
+						title: responseJson.message, 
+						duration: Snackbar.LENGTH_LONG, 
+					});
+				}
+			})
+			.catch((error) => {
+				Snackbar.show({ title: responseJson.message });
+				return error;
+			});
+		}, (error) => {
+			Snackbar.show({ title: error.message });
 		});
+
 	}	
 
-	componentWillMount(){
+	componentDidMount(){
 		const { params } = this.props.navigation.state;
-
-		let bg;
-		let toolbarElements = [];
-
+		
 		SharedPreferences.getItem('auth_token', (value) => {
 			token = value;
 		});
@@ -155,17 +158,12 @@ export default class LabDetail extends Component {
 			server = value;
 		});
 
-		this._updateToolbar(params.room.status);
-	}
+		this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
+		this.interval = setInterval(() => {
+			this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
+		}, 5000);	
 
-	componentDidMount(){
-		const { params } = this.props.navigation.state;
-		
-		if (this.state.room.status > 0) {
-			this.interval = setInterval(() => {
-				this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
-			}, 2000);	
-		}
+		this._updateToolbar(params.room.status);
 	}
 
 	componentWillUnmount(){
@@ -241,23 +239,27 @@ export default class LabDetail extends Component {
 						}
 
 						this._changeState(url, newS);
-
-						if (newS > 0) {
-							this.interval = setInterval(() => {
-								this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
-							}, 2000);
-						}else{
-							clearInterval(this.interval);
-						}
 					}}
 				/>		
-				<View style={styles.cardRow}>
-					<SensorView value='Estado' icon={ this.state.room.status == 0 ? require('../../../res/img/LOCKED.png') : this.state.room.status == 1 ?  require('../../../res/img/UNLOCKED.png') : require('../../../res/img/BUSSY.png')} sensVal={ this.state.room.status == 0 ? 'Cerrado' : this.state.room.status == 1? 'Abierto' : 'Ocupado'} room={ this.state.room } />
-				</View>
-				<View style={styles.cardRow}>
-					<SensorView value='Luz' icon={ this.state.room.light > 100 ? require('../../../res/img/ON.png') : require('../../../res/img/OFF.png') } sensVal={ 'LDR: ' + this.state.room.light } room={ this.state.room } />
-					<SensorView value='Presencia' icon={ this.state.room.presence == 1 ? require('../../../res/img/FULL.png') : require('../../../res/img/EMPTY.png') } sensVal={ this.state.room.presence == 1 ? 'Deteccion de movimiento' : 'No hay movimiento' } room={ this.state.room } />
-				</View>
+				  <View style={styles.cardRow}>
+					<SensorView
+					  value='Estado'
+					  icon={ this.state.room.status == 0 ? require('../../../res/img/LOCKED.png') : this.state.room.status == 1 ?  require('../../../res/img/UNLOCKED.png') : require('../../../res/img/BUSSY.png')}
+					  sensVal={ this.state.room.status == 0 ? 'Cerrado' : this.state.room.status == 1? 'Abierto' : 'Ocupado'}
+					  room={ this.state.room }/>
+				  </View>
+				  <View style={styles.cardRow}>
+					<SensorView
+					  value='Luz'
+					  icon={this.state.room.light > 100 ? require('../../../res/img/ON.png') : require('../../../res/img/OFF.png')}
+					  sensVal={'LDR: ' + this.state.room.light || 'no recibido aun'}
+					  room={this.state.room}/>
+					  <SensorView
+						value='Presencia'
+						icon={this.state.room.presence == 1 ? require('../../../res/img/FULL.png') : require('../../../res/img/EMPTY.png')}
+						sensVal={ this.state.room.presence == 1 ? 'Deteccion de movimiento' : 'No hay movimiento'}
+						room={this.state.room}/>
+				  </View>
 			</View>
 		)
 	}
