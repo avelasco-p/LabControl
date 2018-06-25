@@ -20,6 +20,7 @@ import {
 
 import { NavigationActions } from 'react-navigation';
 import Snackbar from 'react-native-snackbar';
+import _ from 'lodash';
 
 let SharedPreferences = require('react-native-shared-preferences');
 
@@ -29,14 +30,6 @@ const resetAction = NavigationActions.reset({
 		NavigationActions.navigate({ routeName: 'Main' }),
 	],
 });
-
-function search(name, arr){
-	for (var i = 0; i < arr.length; i++) {
-		if (arr[i].roomname == name) {
-			return arr[i];
-		}	
-	}
-}
 
 let server, token; 
 
