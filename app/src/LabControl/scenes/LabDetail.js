@@ -175,35 +175,35 @@ export default class LabDetail extends Component {
 					centerElement={ params.room.roomname }
 					leftElement='arrow-back'
 					onLeftElementPress={() => {
-						//dispatch(backAction);
 						dispatch(resetAction) //to refresh list automatically
 					}}
 					rightElement={{
+						actions: ['place'],
 						menu: {
 							icon: 'more-vert',
-							labels: ['Ver Zonas', 'Abrir', 'Cerrar', 'Ocupar']
+							labels: ['Abrir', 'Cerrar', 'Ocupar']
 						}
 					}}
 					onRightElementPress={(elem) => {
-						console.log('element-clicked', elem);
 						let url = 'http://' + server + ':8080/api/room/' + params.room.id;
 						let newS;
 
+						if (elem.action === 'place') return this._showMap();
+
 						switch (elem.index) {
-							case 1:
+							case 0:
 								url += '/open'	
 								newS = 1;
 								break;
-							case 2:
+							case 1:
 								url += '/close'
 								newS = 0;
 								break;	
-							case 3:
+							case 2:
 								url += '/occupy';
 								newS = 2;
 								break;
 							default:
-								Snackbar.show({ title: 'unavailable request' });	
 								return;
 						}
 
