@@ -57,6 +57,8 @@ export default class LabDetail extends Component {
 
 			this._updateToolbar(params.room.status);
 		});
+
+		this._showMap = this._showMap.bind(this);
 	}
 
 	_updateToolbar(status){
@@ -155,6 +157,13 @@ export default class LabDetail extends Component {
 		});
 
 	}	
+
+	_showMap(){
+		const { navigate } = this.props.navigation;
+		const { room } = this.props.navigation.state.params;
+	
+		navigate('LabMap', { room });
+	}
 
 	componentWillUnmount(){
 		clearInterval(this.interval);
