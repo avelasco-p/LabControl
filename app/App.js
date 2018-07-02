@@ -7,16 +7,24 @@ import Main from './src/LabControl/Main';
 import Navigator from './config/router';
 
 import { 
-	COLOR, 
-	ThemeProvider, 
+  COLOR, 
+  ThemeContext, 
+  getTheme
 } from 'react-native-material-ui';
+
+import { YellowBox } from 'react-native';
+
+YellowBox.ignoreWarnings([
+  'Warning: componentWillMount is deprecated',
+  'Warning: componentWillReceiveProps is deprecated',
+]);
 
 export default class App extends Component<{}> {
   render() {
     return (
-	<ThemeProvider uiTheme={uiTheme}>
-		<Navigator />
-	 </ThemeProvider>
+	  <ThemeContext.Provider value={getTheme(uiTheme)}>
+		<Navigator/>
+	  </ThemeContext.Provider>
     );
   }
 }
