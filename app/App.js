@@ -15,6 +15,7 @@ import {
 import { YellowBox } from 'react-native';
 
 YellowBox.ignoreWarnings([
+  'Warning: componentWillUpdate is deprecated',
   'Warning: componentWillMount is deprecated',
   'Warning: componentWillReceiveProps is deprecated',
 ]);
