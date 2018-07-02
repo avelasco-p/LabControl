@@ -79,7 +79,7 @@ export default class LabList extends Component{
 		return (
 			<View style={styles.mainContainer}>
 				<Toolbar 
-					centerElement="Laboratorios"	
+					centerElement="Cuartos"
 					rightElement='exit-to-app' //more-vert is another option
 					onRightElementPress={() => {
 						SharedPreferences.removeItem('auth_token');			
