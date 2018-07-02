@@ -11,7 +11,6 @@ import {
 
 import { 
 	COLOR, 
-	ThemeProvider,
 	Button,
 } from 'react-native-material-ui';
 
@@ -51,7 +50,7 @@ export default class Login extends Component{
 						height: '100%',
 						justifyContent: 'center',
 					}}	
-					source={require('../../../res/img/LOGIN.png')}
+					source={require('../../../res/img/safeLock.png')}
 				/>
 				<View style={styles.firstContainer}>
 					<ActivityIndicator
@@ -81,17 +80,14 @@ export default class Login extends Component{
 						value={this.state.password}
 					/>
 					<Button 
-						ref='Submit'
 						style={{ 
 								container: { 
-									backgroundColor: 'orange', 
 									alignSelf: 'center',
 									margin: 20,
 								}}} 
 						onPress={this._signupButton.bind(this)}
 						raised 
-						primary text="SIGN IN"
-					/>
+						accent text="SIGN IN"/>
 					<TextInput 
 						style={styles.textInput}
 						placeholder="Auth Server IP"
