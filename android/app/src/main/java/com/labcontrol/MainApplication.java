@@ -6,6 +6,7 @@ import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.azendoo.reactnativesnackbar.SnackbarPackage;
 import in.sriraman.sharedpreferences.RNSharedPreferencesReactPackage;
+import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
@@ -26,9 +27,10 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
-            new VectorIconsPackage(),
-            new SnackbarPackage(),
-            new RNSharedPreferencesReactPackage()
+          new VectorIconsPackage(),
+          new SnackbarPackage(),
+          new RNSharedPreferencesReactPackage(),
+          new MapsPackage()
       );
     }
 
