@@ -42,12 +42,10 @@ export default class LabList extends Component{
 			refreshing: false,			
 		};
 
-		SharedPreferences.getItem('server', (value) => {
-			server = value; 
-		});
-
-		SharedPreferences.getItem('auth_token', (value) => {
-			token = value;
+		SharedPreferences.getItems(['server', 'auth_token'], (values) => {
+			server = values[0]
+			token = values[1];
+			this._onRefresh();
 		});
 	}
 
@@ -73,10 +71,6 @@ export default class LabList extends Component{
 		.catch((error) => {
 			Snackbar.show({ title: error.toString() + '. Try to refresh list' });
 		});
-	}
-
-	componentDidMount(){
-		this._onRefresh();
 	}
 
 	render(){
