@@ -40,10 +40,23 @@ export default class LabDetail extends Component {
 				light: 'no recibido aun',
 				presence: 'no recibido aun'
 			},
-			toolbarElements: [],
 			bg: null,
 			counter: 0,
 		}
+
+		SharedPreferences.getItems(['server', 'auth_token'], (values) => {
+			const { params } = props.navigation.state;
+
+			server = values[0]
+			token = values[1];
+
+			this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
+			this.interval = setInterval(() => {
+				this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
+			}, 5000);	
+
+			this._updateToolbar(params.room.status);
+		});
 	}
 
 	_updateToolbar(status){
@@ -55,19 +68,16 @@ export default class LabDetail extends Component {
 		switch (status) {
 			case 0:
 				bg = { backgroundColor: '#3a3733' };
-				toolbarElements = ['lock-open'];
 				room.status = 0;
 				break;
 
 			case 1:
 				bg = { backgroundColor: '#339966' };
-				toolbarElements = ['do-not-disturb-on', 'lock'];
 				room.status = 1;
 				break;
 
 			case 2:
 				bg = { backgroundColor: '#ef7a08' };
-				toolbarElements = ['lock-open', 'lock'];
 				room.status = 2;
 				break;
 
@@ -77,7 +87,6 @@ export default class LabDetail extends Component {
 
 		this.setState({
 			status: status,
-			toolbarElements: toolbarElements,	
 			bg: bg,
 			room: room,
 		});
@@ -147,25 +156,6 @@ export default class LabDetail extends Component {
 
 	}	
 
-	componentDidMount(){
-		const { params } = this.props.navigation.state;
-		
-		SharedPreferences.getItem('auth_token', (value) => {
-			token = value;
-		});
-
-		SharedPreferences.getItem('server', (value) => {
-			server = value;
-		});
-
-		this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
-		this.interval = setInterval(() => {
-			this._getRoomInfo('http://' + server + ':8080/api/room/' + params.room.id + '/info');	
-		}, 5000);	
-
-		this._updateToolbar(params.room.status);
-	}
-
 	componentWillUnmount(){
 		clearInterval(this.interval);
 	}
@@ -178,34 +168,6 @@ export default class LabDetail extends Component {
 		let light_icon = '';
 		let presence_icon = '';
 
-		/*
-
-		switch(this.state.room.status){
-			case 0:
-				lock_icon = require('../../../res/img/LOCKED.png');
-				break;
-			case 1:
-				lock_icon = require('../../../res/img/UNLOCKED.png');
-				break;
-			case 2:
-				lock_icon = require('../../../res/img/BUSSY.png');
-				break;
-		}
-
-		if (this.state.room.light == 1) {
-			light_icon = require('../../../res/img/ON.png');	
-		}else{
-			light_icon = require('../../../res/img/OFF.png');
-		}
-
-		if (this.state.room.presence == 1) {
-			presence_icon = require('../../../res/img/FULL.png');	
-		}else{
-			presence_icon = require('../../../res/img/EMPTY.png');
-		}
-
-		*/
-		
 		return(
 			<View style={styles.mainContainer}>
 				<Toolbar
@@ -216,26 +178,33 @@ export default class LabDetail extends Component {
 						//dispatch(backAction);
 						dispatch(resetAction) //to refresh list automatically
 					}}
-					rightElement={this.state.toolbarElements}
+					rightElement={{
+						menu: {
+							icon: 'more-vert',
+							labels: ['Ver Zonas', 'Abrir', 'Cerrar', 'Ocupar']
+						}
+					}}
 					onRightElementPress={(elem) => {
+						console.log('element-clicked', elem);
 						let url = 'http://' + server + ':8080/api/room/' + params.room.id;
 						let newS;
 
-						switch (elem.action) {
-							case 'lock-open':
+						switch (elem.index) {
+							case 1:
 								url += '/open'	
 								newS = 1;
 								break;
-							case 'lock':
+							case 2:
 								url += '/close'
 								newS = 0;
 								break;	
-							case 'do-not-disturb-on':
+							case 3:
 								url += '/occupy';
 								newS = 2;
 								break;
 							default:
 								Snackbar.show({ title: 'unavailable request' });	
+								return;
 						}
 
 						this._changeState(url, newS);
